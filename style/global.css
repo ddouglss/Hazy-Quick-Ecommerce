@@ -1,0 +1,432 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+
+body {
+    font-family: 'Arial';
+    font-style: italic;
+}
+
+.header-inner-container {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav {
+    background-color: #2c2c2c;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 10px 0px 10px #2c2c2c;
+    z-index: 99;
+}
+
+.nav > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.logo{
+    color: #004c94;
+}
+
+.logo span{
+    color: #fff;
+}
+
+.nav-icones-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icones-container img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.nav-icones-container img:first-child {
+    margin-right: 1rem;
+}
+
+nav ul li {
+    color: #fff;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    transform: translateY(-10px);
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+.menu-botton {
+    display: none;
+}
+
+header {
+    background-image: radial-gradient(#fff, #c7c7c7);
+}
+
+.header-bottom-side {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding: 1rem;
+}
+
+.header-bottom-side-left {
+    height: 100%;
+    flex-basis: 50%;
+}
+
+.header-bottom-side-left h2 {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-bottom-side-left p {
+    line-height: none;
+    margin-bottom: 1.5rem;
+}
+
+.header-bottom-side-left button {
+    background-color: #0084ff;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 3.8rem;
+    border-radius: 9999px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.header-bottom-side-left button:hover {
+    background-color: #004c94;
+}
+
+.header-bottom-side-right {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-bottom-side-right img {
+    width: 115%;
+}
+
+/* Media Queries*/
+
+@media (max-width: 800px){
+    .logo{
+        font-size: 1.2rem;
+    }
+
+    .menu-botton{
+        display: block;
+    }
+
+    .header-bottom-side{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    nav{
+        position: absolute;
+        background-color: #2c2c2c;
+        width: 100%;
+        top: 46px;
+        display: none;
+    }
+
+    .show-menu nav{
+        display: block;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav ul li{
+        text-align: center;
+        padding: 0.8rem;
+    }
+}
+
+/* Header */
+
+/* Main container */
+main{
+    background-color: #ebebeb;
+}
+
+.gray-background{
+    background-color: #2c2c2c;
+}
+
+.page-inner-container{
+    max-width: 1280px;
+    margin: 0px auto;
+}
+
+.colunas{
+    display: grid;
+    justify-content: space-evenly;
+    padding: 4rem 1rem;
+}
+
+.colunas-3{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.colunas-3 img{
+    max-width: 100%;
+}
+
+.colunas-4 img{
+    max-width: 100%;
+}
+
+.colunas-4{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.colunas>*{
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.colunas>*:hover{
+    transform: translateY(-10px);
+}
+
+.section-title{
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.8rem;
+}
+
+.subtitle-underline{
+    width: 100px;
+    height: 5px;
+    background: #0084ff;
+    border-radius: 9999px;
+    margin: 8px auto 0px auto;
+}
+
+.produto{
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-produto{
+    font-weight: 600;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.rate{
+    color: #0084ff;
+    font-size: 1.2rem;
+}
+
+.preco-produto{
+    font-weight: 500;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.preco-parcelado{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.exclusive-container{
+    color: #fff;
+    flex-direction: row-reverse;
+    padding: 5rem 1rem;
+}
+
+.exclusive-container img{
+    width: 500px;
+}
+
+/* Media queries*/
+
+@media (max-width: 800px){
+    .subtitle-underline{
+        font-size: 1rem;
+    }
+    .colunas-3{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .colunas-4{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nome-produto, .preco-produto, .rate{
+        max-width: 1rem;
+        overflow: hidden;
+        font-size: 0.8rem;
+    }
+
+    .exclusive-container{
+        flex-direction: column-reverse;
+    }
+}
+
+/* Main container*/
+
+/* Comentarios */
+
+.comentarios{
+    display: flex;
+    padding: 4rem 1rem;
+    justify-content: space-evenly;
+}
+
+.comentario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 30%;
+    text-align: center;
+    box-shadow: 0 0 15px #afafaf;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.comentario:hover{
+    transform: translateY(-10px);
+}
+
+.comentario p{
+    margin: 5px 0;
+}
+
+.comentario p:first-child{
+    font-weight: bold;
+    font-size: 5rem;
+    color: #0084ff;
+    margin-top: 3rem;
+    line-height: 2rem;
+}
+
+.comentario p:last-child{
+    font-weight: bold;
+}
+
+/* Media queries */
+
+@media (max-width: 800px){
+    .comentarios{
+        flex-direction: column;
+    }
+
+    .comentario{
+        margin-bottom: 1.2rem;
+    }
+}
+
+/* Comentarios */
+
+/* Footer */
+
+.footer-container{
+    display: flex;
+    align-items: center;
+    color: #8f8f8f;
+    padding: 4rem 1rem;
+    gap: 2rem;
+}
+
+.opcoes-download>*{
+    margin: 1rem 0;
+}
+
+.opcoes-download>p:first-child{
+    font-weight: bold;
+    color: #fff;
+}
+
+.opcoes-download>div{
+    display: flex;
+}
+
+.opcoes-download>div img{
+    width: 180px;
+}
+
+.logo-footer{
+    text-align: center;
+}
+
+.links-footer h3{
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.links-footer ul{
+    list-style: none;
+}
+
+.links-footer ul li{
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.copyrigth{
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Media queries */
+
+@media (max-width: 800px){
+    .footer-container{
+        display: inline;
+        font-size: 0.8rem;
+    }
+
+    .footer-container>div{
+        padding: 1rem;
+    }
+
+    .opcoes-download>div{
+        display: inline;
+    }
+
+    .opcoes-download>div img{
+        width: 120px;
+    }
+
+    .copyrigth{
+        font-size: 0.8rem;
+    }
+}
+
+/* Footer */
